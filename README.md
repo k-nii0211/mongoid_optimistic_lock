@@ -15,7 +15,7 @@ git_source(:bitbucket) do |repo_name|
   "https://bitbucket.org/#{repo_name}.git"
 end
 
-gem 'mongoid_optimistic_lock' bitbucket: 'guucy/mongoid_optimistic_lock'
+gem 'mongoid_optimistic_lock', bitbucket: 'guucy/mongoid_optimistic_lock'
 ```
 
 And then execute:
