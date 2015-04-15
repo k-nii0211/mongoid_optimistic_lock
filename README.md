@@ -11,12 +11,11 @@ Mongoid Optimistic Lock supports simple optimistic lock.
 Add this line to your application's Gemfile:
 
 ```ruby
-```ruby
 git_source(:bitbucket) do |repo_name|
   "https://bitbucket.org/#{repo_name}.git"
 end
 
-gem 'mongoid_optimistic_lock' bitbucket: 'guucy/mongoid_sequences'
+gem 'mongoid_optimistic_lock' bitbucket: 'guucy/mongoid_optimistic_lock'
 ```
 
 And then execute:
