@@ -5,6 +5,7 @@ require 'mongoid_optimistic_lock/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "mongoid_optimistic_lock"
+  spec.platform      = Gem::Platform::RUBY
   spec.version       = MongoidOptimisticLock::VERSION
   spec.authors       = ["nii_kenichi"]
   spec.email         = ["kenichi@guucy.com"]
