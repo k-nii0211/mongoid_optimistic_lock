@@ -1,14 +1,10 @@
 require 'spec_helper'
 
-describe MongoidOptimisticLock do
-  it 'has a version number' do
-    expect(MongoidOptimisticLock::VERSION).not_to be nil
-  end
-
+describe Mongoid::OptimisticLock do
   context 'when there is no default scope' do
     context 'when the document is new' do
       it 'returns 1' do
-        expect(Blog.new.version).to eq(1)
+        expect(Blog.new.lock_version).to eq(1)
       end
     end
   end
@@ -16,7 +12,7 @@ describe MongoidOptimisticLock do
   context 'when the document is persisted once' do
     let(:blog) { Blog.create(title: '1') }
     it 'returns 1' do
-      expect(blog.version).to eq(1)
+      expect(blog.lock_version).to eq(1)
     end
   end
 
@@ -28,7 +24,17 @@ describe MongoidOptimisticLock do
     end
 
     it 'returns the number of versions' do
-      expect(blog.version).to eq(4)
+      expect(blog.lock_version).to eq(4)
+    end
+  end
+
+  context 'when the document is persisted more than once' do
+    let(:blog) { Blog.create(title: '1') }
+
+    it 'returns the number of versions' do
+      expect(blog.update({title: '2', lock_version: 1})).to be_truthy
+      expect(blog.update({title: '3', lock_version: 1})).to be_falsey
+      expect(blog.update({title: '3', lock_version: 2})).to be_truthy
     end
   end
 end

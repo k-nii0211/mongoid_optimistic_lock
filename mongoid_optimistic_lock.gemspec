@@ -1,12 +1,12 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'mongoid_optimistic_lock/version'
+require 'mongoid/optimistic_lock/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "mongoid_optimistic_lock"
   spec.platform      = Gem::Platform::RUBY
-  spec.version       = MongoidOptimisticLock::VERSION
+  spec.version       = Mongoid::OptimisticLock::VERSION
   spec.authors       = ["nii_kenichi"]
   spec.email         = ["kenichi@guucy.com"]
 

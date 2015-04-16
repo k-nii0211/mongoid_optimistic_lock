@@ -5,7 +5,7 @@ MODELS = File.join(File.dirname(__FILE__), 'app/models')
 $LOAD_PATH.unshift(MODELS)
 
 require 'mongoid'
-require 'mongoid_optimistic_lock'
+require 'mongoid/optimistic_lock'
 
 ENV['WERCKER_MONGODB_HOST'] ||= 'localhost:27017'
 
