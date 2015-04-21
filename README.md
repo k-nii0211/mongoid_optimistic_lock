@@ -1,8 +1,10 @@
 # MongoidOptimisticLock
 
-Mongoid Optimistic Lock supports simple optimistic lock.
+Mongoid Optimistic Lock supports simple optimistic lock via dirty tracking.
 
 ## Status
+
+[![Circle CI](https://circleci.com/gh/k-nii0211/mongoid_optimistic_lock.svg?style=svg)](https://circleci.com/gh/k-nii0211/mongoid_optimistic_lock)
 
 ## Installation
 
