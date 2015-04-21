@@ -4,8 +4,6 @@ Mongoid Optimistic Lock supports simple optimistic lock.
 
 ## Status
 
-[![wercker status](https://app.wercker.com/status/9a5dd7d860a3b386fc2ed5506cede266/m "wercker status")](https://app.wercker.com/project/bykey/9a5dd7d860a3b386fc2ed5506cede266)
-
 ## Installation
 
 Add this line to your application's Gemfile:
